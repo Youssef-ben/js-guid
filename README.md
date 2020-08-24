@@ -1,5 +1,7 @@
 # js-guid
 
+![Testing `js-guid`](https://github.com/Youssef-ben/js-guid/workflows/Testing%20%60js-guid%60/badge.svg?branch=master)
+
 `js-guid` is a javascript library that lets you generate and manage unique identifiers GUIDs writen with TypeScript.
 
 ## Quickstart
