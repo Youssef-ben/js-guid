@@ -1,0 +1,4 @@
+node_modules
+non_npm_dependencies
+dist
+coverage
