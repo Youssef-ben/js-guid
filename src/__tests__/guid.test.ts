@@ -3,22 +3,7 @@ import { INVALID_GUID } from '../guid.constants';
 
 const DEFAULT_STRING_GUID = '77eb3969-19fd-4223-907a-5749669f1178';
 const DEFAULT_BYTE_GUID = new Uint8Array([
-  105,
-  57,
-  235,
-  119,
-  253,
-  25,
-  35,
-  66,
-  144,
-  122,
-  87,
-  73,
-  102,
-  159,
-  17,
-  120,
+  105, 57, 235, 119, 253, 25, 35, 66, 144, 122, 87, 73, 102, 159, 17, 120,
 ]);
 
 describe('Guid - Instantiation', () => {
@@ -56,19 +41,7 @@ describe('Guid - Instantiation', () => {
     try {
       new Guid(
         new Uint8Array([
-          105,
-          57,
-          235,
-          119,
-          253,
-          25,
-          35,
-          66,
-          144,
-          122,
-          87,
-          73,
-          102,
+          105, 57, 235, 119, 253, 25, 35, 66, 144, 122, 87, 73, 102,
         ]),
       );
     } catch (error) {
@@ -77,7 +50,7 @@ describe('Guid - Instantiation', () => {
   });
 });
 
-describe('Guid - Convertion', () => {
+describe('Guid - Conversion', () => {
   test('String to Uint8Array', () => {
     //Prepare
     const guid = new Guid(DEFAULT_STRING_GUID);
@@ -132,7 +105,7 @@ describe('Guid - Static methods', () => {
 
   test('Parse from String', () => {
     const result = Guid.parse(DEFAULT_STRING_GUID) as Uint8Array;
-    expect(result).toBeInstanceOf(Object);
+    expect(result).toBeInstanceOf(Uint8Array);
     expect(result).toEqual(DEFAULT_BYTE_GUID);
 
     try {

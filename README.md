@@ -2,9 +2,9 @@
 
 ![Testing `js-guid`](https://github.com/Youssef-ben/js-guid/workflows/Testing%20%60js-guid%60/badge.svg?branch=master)
 
-`js-guid` is a javascript library that lets you generate and manage unique identifiers GUIDs writen with TypeScript.
+`js-guid` is a javascript library that lets you generate and manage unique identifiers GUIDs written with TypeScript.
 
-## Quickstart
+## Quick start
 
 ### 1. Install
 
@@ -163,22 +163,7 @@ console.log(guid.toString());
 
 guid = new Guid(
   new Uint8Array([
-    105,
-    57,
-    235,
-    119,
-    253,
-    25,
-    35,
-    66,
-    144,
-    122,
-    87,
-    73,
-    102,
-    159,
-    17,
-    120,
+    105, 57, 235, 119, 253, 25, 35, 66, 144, 122, 87, 73, 102, 159, 17, 120,
   ]),
 );
 console.log(guid.toString());
@@ -257,22 +242,7 @@ console.log(guid.equals('77eb3969-19fd-4223-907a-5749669f1178'));
 console.log(
   guid.equals(
     new Uint8Array([
-      105,
-      57,
-      235,
-      119,
-      253,
-      25,
-      35,
-      66,
-      144,
-      122,
-      87,
-      73,
-      102,
-      159,
-      17,
-      120,
+      105, 57, 235, 119, 253, 25, 35, 66, 144, 122, 87, 73, 102, 159, 17, 120,
     ]),
   ),
 );

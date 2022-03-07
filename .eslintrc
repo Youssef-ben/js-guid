@@ -8,9 +8,8 @@
   },
   "plugins": ["import", "@typescript-eslint", "prettier", "filenames"],
   "extends": [
-    "prettier/@typescript-eslint",
+    "prettier",
     "plugin:@typescript-eslint/recommended",
-    "prettier/@typescript-eslint",
     "plugin:prettier/recommended"
   ],
   "parserOptions": {
@@ -100,15 +99,6 @@
       {
         "avoidEscape": true,
         "allowTemplateLiterals": true
-      }
-    ],
-    "prettier/prettier": [
-      "error",
-      {
-        "trailingComma": "all",
-        "singleQuote": true,
-        "printWidth": 80,
-        "tabWidth": 2
       }
     ]
   }

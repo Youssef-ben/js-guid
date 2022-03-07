@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 export interface IGuid {
   /**
    * Returns the string format of the Guid.

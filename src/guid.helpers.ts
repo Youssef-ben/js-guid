@@ -7,16 +7,16 @@ const BYTE_ORDER = [3, 2, 1, 0, 5, 4, 7, 6, 8, 9, 10, 11, 12, 13, 14, 15];
 /**
  * Regex to validate the given GUID accept all the UUIDs version.
  */
-const regxValidator = new RegExp(
+const regexValidator = new RegExp(
   '^[a-z0-9]{8}-[a-z0-9]{4}-[a-z0-9]{4}-[a-z0-9]{4}-[a-z0-9]{12}$',
   'i',
 );
 
 /**
- * Convert the given number to a Hexa format.
+ * Convert the given number to a Hex format.
  * @param value The number to be converted
  */
-function convertNumberToHexa(value: number): string {
+function convertNumberToHex(value: number): string {
   let hex = value <= 0xf ? '0' : '';
   hex += value.toString(ARRAY_LENGTH);
   return hex;
@@ -27,7 +27,7 @@ function convertNumberToHexa(value: number): string {
  * @param value String value of the Guid.
  */
 export function stringToUint8Array(value: string): Uint8Array {
-  // Strip any separatorsor un-wanted chars.
+  // Strip any separators and un-wanted chars.
   const regExp = new RegExp('[{}()-]', 'g');
   const guid = value.replace(regExp, '');
 
@@ -57,7 +57,7 @@ export function uint8ArrayToString(value: Uint8Array): string {
     guid += i === 4 || i === 6 || i === 8 || i === 10 ? '-' : '';
 
     const pos = BYTE_ORDER[i];
-    guid += convertNumberToHexa(value[pos]);
+    guid += convertNumberToHex(value[pos]);
   }
 
   return guid;
@@ -72,7 +72,7 @@ export function isStringValidGuid(guid: string): boolean {
     return false;
   }
 
-  return regxValidator.test(guid);
+  return regexValidator.test(guid);
 }
 
 /**
@@ -81,18 +81,19 @@ export function isStringValidGuid(guid: string): boolean {
  */
 export function isUint8ArrayValidGuid(guid: Uint8Array): boolean {
   const strGuid = uint8ArrayToString(guid);
-  return guid && regxValidator.test(strGuid);
+  return guid && regexValidator.test(strGuid);
 }
 
 /**
  * Generate a random v4 GUID.
  */
 export function GenerateGuidV4(): string {
-  return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (
-    char: string,
-  ) {
-    const random = (Math.random() * 16) | 0;
-    const v = char === 'x' ? random : (random & 0x3) | 0x8;
-    return v.toString(16);
-  });
+  return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(
+    /[xy]/g,
+    function (char: string) {
+      const random = (Math.random() * 16) | 0;
+      const v = char === 'x' ? random : (random & 0x3) | 0x8;
+      return v.toString(16);
+    },
+  );
 }
