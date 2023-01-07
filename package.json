@@ -1,7 +1,7 @@
 {
   "name": "js-guid",
   "productName": "Javascript guid.",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Javascript library that lets you generate and manage unique identifiers GUIDs",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
