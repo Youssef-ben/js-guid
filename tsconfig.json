@@ -6,8 +6,7 @@
     "outDir": "./dist",
     "strict": true,
     "strictNullChecks": true,
-    "sourceMap": true,
-    "sourceRoot": "./",
+    "sourceMap": false,
     "moduleResolution": "node",
     "lib": ["esnext", "dom"],
     "rootDir": "src"
