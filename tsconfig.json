@@ -7,6 +7,7 @@
     "strict": true,
     "strictNullChecks": true,
     "sourceMap": true,
+    "sourceRoot": "./",
     "moduleResolution": "node",
     "lib": ["esnext", "dom"],
     "rootDir": "src"

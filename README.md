@@ -31,7 +31,7 @@ const { Guid } = require('js-guid');
 | API                                      | Description                                                            |
 | ---------------------------------------- | ---------------------------------------------------------------------- |
 | [`Guid.EMPTY`](#guidempty)               | (static) The Empty Guid string (all zeros).                            |
-| [`Guid.NewGuid()`](#guidnewguid)         | (static) Generate a new v4 Guid and return a new instance of the Guid. |
+| [`Guid.newGuid()`](#guidnewguid)         | (static) Generate a new v4 Guid and return a new instance of the Guid. |
 | [`Guid.isValid(value)`](#guidisvalid)    | (static) Checks if the given value is a valid GUID.                    |
 | [`Guid.parse(value)`](#guidparse)        | (static) Parse the given value into the opposite type.                 |
 | [`new Guid(value?)`](#guid-Object)       | Instantiate a new Guid object.                                         |
@@ -57,7 +57,7 @@ console.log(Guid.Empty);
 // ⇨ '00000000-0000-0000-0000-000000000000'
 ```
 
-#### **Guid.NewGuid()**
+#### **Guid.newGuid()**
 
 Generate a new v4 Guid and return a new instance of the Guid.
 
@@ -66,7 +66,7 @@ Example
 ```js
 import { Guid } from 'js-guid';
 
-console.log(Guid.NewGuid());
+console.log(Guid.newGuid());
 
 // Output
 // ⇨ '77eb3969-19fd-4223-907a-5749669f1178'

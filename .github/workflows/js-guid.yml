@@ -25,5 +25,8 @@ jobs:
       - name: Installing dependencies
         run: yarn
 
+      - name: Validating code linting
+        run: yarn lint
+
       - name: Testing using Jest
         run: yarn test
